@@ -1,0 +1,250 @@
+$font-stack: Poppins, sans-serif;
+$primary-color: #ffff;
+
+$w: #FFFFFF;
+$b: #000000;
+$lg: #C0C0C0;
+
+
+
+html,
+body {
+  font-family: Poppins, sans-serif;
+  font-weight: 400px;
+  background-color: black;
+  line-height: 20px;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  color: $b;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  padding: 9px 10px 13px 42px;
+  border-radius: 14px;
+  background: $w;
+  transition: all 100s;
+  &:hover {
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
+  }
+
+  @-webkit-keyframes flash {
+    0% {  opacity: .3;  }
+    100% { opacity: 1; }
+  }
+  @keyframes flash {
+    0% { opacity: .3; }
+    100% { opacity: 1;  }
+  }
+
+  &::before {
+    content: url(../img/frames/button-frame.svg);
+    position: absolute;
+    color: $b;
+    top: 5px;
+    left: 1px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+/*===============================HEADER======================================
+===================================================================================== */
+
+
+
+.header {
+
+
+  &__top-inner {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto 30px auto;
+  }
+
+  &__logo {
+    margin-left: 32px;
+    margin-right: 320px;
+  }
+
+  &__top-right {
+    color: $w;
+    min-width: 700px;
+    display: flex;
+    justify-content: end;
+  }
+
+  &__nav {
+    display: flex;
+
+
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: 20px;
+    margin-right: 32px;
+
+    &:first-child {
+      font-size: 13px;
+      margin-right: 56px;
+    }
+  }
+
+  &__top-btn {
+    width: 155px;
+    min-height: 42px;
+    box-sizing: border-box;
+    align-items: center;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 20px;
+    background-color: #fff;
+    transition: all 0.3s;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 10px 20px 13px 20px;
+  }
+
+
+  &__body {
+    height: 716px;
+    background: url(../img/pictures/main.jpg) center center / cover no-repeat;
+  }
+
+  &__body-inner {}
+
+  &__body-heading {
+    margin: 0 auto;
+    padding-top: 460px;
+    align-items: center;
+    max-width: 600px;
+    color: $w;
+    text-align: center;
+  }
+
+
+  &__data {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+    margin-right: 40px;
+  }
+}
+
+.heading {
+
+  &__subtitle {
+    color: #C0C0C0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 54px;
+    line-height: 59px;
+  }
+
+  &__text {
+    color: #C0C0C0;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+
+/*===============================AREAS======================================
+===================================================================================== */
+
+.areas {
+  padding: 113px 136px 100px;
+
+  &__inner {}
+
+  &__heading {
+    text-align: center;
+
+  }
+
+  &__title {
+    color: $w;
+    font-size: 40px;
+    line-height: 42px;
+    margin-bottom: 15px;
+
+  }
+
+  &__subtitle {
+    color: $lg;
+    font-size: 23px;
+    line-height: 30px;
+    margin-bottom: 42px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template: auto auto / repeat(2, auto);
+    gap: 16px;
+  }
+
+  &__list-item {
+    min-width: 576px;
+    min-height: 600px;
+
+    &:first-child {
+      background: url(../img/pictures/areas/product-photo.jpg) center center / cover no-repeat;
+    }
+    &:nth-child(2) {
+      background: url(../img/pictures/areas/architecture-photo.jpg) center center / cover no-repeat;
+    }
+    &:nth-child(3) {
+      background: url(../img/pictures/areas/drone-photo.jpg) center center / cover no-repeat;
+    }
+    &:last-child {
+      background: url(../img/pictures/areas/wildlefe-photo.jpg) center center / cover no-repeat;
+    }
+  }
+
+  &__item-content {
+    margin: 420px 0 0 30px;
+  }
+
+  &__content-title {
+    color: $w;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__content-text {
+    color: $lg;
+    min-height: 80px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 17px;
+  }
+
+  &__content-btn {
+    margin-bottom: 30px;
+  }
+}
