@@ -13,6 +13,7 @@ body {
   font-weight: 400px;
   background-color: black;
   line-height: 20px;
+  color: $w;
 }
 
 .wrapper {
@@ -32,20 +33,6 @@ body {
   border-radius: 14px;
   background: $w;
   transition: all 100s;
-  &:hover {
-    opacity: 1;
-    -webkit-animation: flash 1s;
-    animation: flash 1s;
-  }
-
-  @-webkit-keyframes flash {
-    0% {  opacity: .3;  }
-    100% { opacity: 1; }
-  }
-  @keyframes flash {
-    0% { opacity: .3; }
-    100% { opacity: 1;  }
-  }
 
   &::before {
     content: url(../img/frames/button-frame.svg);
@@ -55,6 +42,33 @@ body {
     left: 1px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
+
+  &:hover::after {
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
+  }
+
+  @-webkit-keyframes flash {
+    0% {
+      opacity: .3;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes flash {
+    0% {
+      opacity: .3;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
 }
 
 /*===============================HEADER======================================
@@ -126,7 +140,7 @@ body {
 
 
   &__body {
-    height: 716px;
+    min-height: 716px;
     background: url(../img/pictures/main.jpg) center center / cover no-repeat;
   }
 
@@ -212,12 +226,15 @@ body {
     &:first-child {
       background: url(../img/pictures/areas/product-photo.jpg) center center / cover no-repeat;
     }
+
     &:nth-child(2) {
       background: url(../img/pictures/areas/architecture-photo.jpg) center center / cover no-repeat;
     }
+
     &:nth-child(3) {
       background: url(../img/pictures/areas/drone-photo.jpg) center center / cover no-repeat;
     }
+
     &:last-child {
       background: url(../img/pictures/areas/wildlefe-photo.jpg) center center / cover no-repeat;
     }
@@ -247,4 +264,86 @@ body {
   &__content-btn {
     margin-bottom: 30px;
   }
+}
+
+/*===============================PHOTO__EXAMPLE======================================
+===================================================================================== */
+
+.photo {
+
+  &__example-1 {
+    background: url(../img/pictures/sunset.jpg) center / cover no-repeat;
+    min-height: 600px;
+  }
+
+  &__example-2 {
+    background: url(../img/pictures/monstera.jpg) center center / cover no-repeat;
+    min-height: 600px;
+  }
+
+  &__example-3 {
+    background: url(../img/pictures/star.jpg) center center / cover no-repeat;
+    min-height: 600px;
+  }
+
+  &__example-content {
+    display: flex;
+    flex-direction: column;
+    padding: 260px 0px 203px 1080px;
+  }
+
+  &__content-title {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  
+  }
+
+  &__content-text {
+    color: $lg;
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 60px;
+ 
+  }
+
+  &__content-data {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 40px 40px 0;
+  }
+
+  &__data-item-1 {
+    display: flex;
+    font-size: 12px;
+    line-height: 12px;
+    padding-right: 16px;
+  }
+
+  &__item-img {
+    padding-right: 5px;
+  }
+
+
+  &__data-item-2 {
+    display: flex;
+    font-size: 12px;
+    line-height: 12px;
+    padding-right: 16px;
+  }
+
+  &__data-item-3 {
+    display: flex;
+    font-size: 12px;
+    line-height: 12px;
+    padding-right: 16px;
+  }
+
+  &__data-item-4 {
+    display: flex;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
 }

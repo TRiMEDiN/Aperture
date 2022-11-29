@@ -4,6 +4,7 @@ body {
   font-weight: 400px;
   background-color: black;
   line-height: 20px;
+  color: #FFFFFF;
 }
 
 .wrapper {
@@ -24,7 +25,15 @@ body {
   background: #FFFFFF;
   transition: all 100s;
 }
-.button:hover {
+.button::before {
+  content: url(../img/frames/button-frame.svg);
+  position: absolute;
+  color: #000000;
+  top: 5px;
+  left: 1px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.button:hover::after {
   opacity: 1;
   -webkit-animation: flash 1s;
   animation: flash 1s;
@@ -44,14 +53,6 @@ body {
   100% {
     opacity: 1;
   }
-}
-.button::before {
-  content: url(../img/frames/button-frame.svg);
-  position: absolute;
-  color: #000000;
-  top: 5px;
-  left: 1px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /*===============================HEADER======================================
@@ -106,7 +107,7 @@ body {
   padding: 10px 20px 13px 20px;
 }
 .header__body {
-  height: 716px;
+  min-height: 716px;
   background: url(../img/pictures/main.jpg) center center/cover no-repeat;
 }
 .header__body-heading {
@@ -201,4 +202,67 @@ body {
 }
 .areas__content-btn {
   margin-bottom: 30px;
+}
+
+/*===============================PHOTO__EXAMPLE======================================
+===================================================================================== */
+.photo__example-1 {
+  background: url(../img/pictures/sunset.jpg) center/cover no-repeat;
+  min-height: 600px;
+}
+.photo__example-2 {
+  background: url(../img/pictures/monstera.jpg) center center/cover no-repeat;
+  min-height: 600px;
+}
+.photo__example-3 {
+  background: url(../img/pictures/star.jpg) center center/cover no-repeat;
+  min-height: 600px;
+}
+.photo__example-content {
+  display: flex;
+  flex-direction: column;
+  padding: 260px 0px 203px 1080px;
+}
+.photo__content-title {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.photo__content-text {
+  color: #C0C0C0;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 60px;
+}
+.photo__content-data {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 40px 40px 0;
+}
+.photo__data-item-1 {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  padding-right: 16px;
+}
+.photo__item-img {
+  padding-right: 5px;
+}
+.photo__data-item-2 {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  padding-right: 16px;
+}
+.photo__data-item-3 {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  padding-right: 16px;
+}
+.photo__data-item-4 {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
 }/*# sourceMappingURL=style.css.map */
