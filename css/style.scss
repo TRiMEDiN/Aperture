@@ -6,7 +6,6 @@ $b: #000000;
 $lg: #C0C0C0;
 
 
-
 html,
 body {
   font-family: Poppins, sans-serif;
@@ -22,6 +21,7 @@ body {
   overflow: hidden;
 }
 
+
 .button {
   position: relative;
   display: inline-block;
@@ -34,16 +34,7 @@ body {
   background: $w;
   transition: all 100s;
 
-  &::before {
-    content: url(../img/frames/button-frame.svg);
-    position: absolute;
-    color: $b;
-    top: 5px;
-    left: 1px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-
-  &:hover::after {
+  &:hover .circle {
     opacity: 1;
     -webkit-animation: flash 1s;
     animation: flash 1s;
@@ -69,6 +60,67 @@ body {
     }
   }
 
+
+  &__text {
+    display: inline;
+  }
+}
+
+
+.circle {
+  position: absolute;
+  top: 5px;
+  left: 1px;
+}
+
+
+
+
+
+
+/*===============================DATA======================================
+===================================================================================== */
+
+.data {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 40px 40px 0;
+}
+
+.data-item-1 {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  padding-right: 16px;
+}
+
+.data-item-2 {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  padding-right: 16px;
+}
+
+.data-item-3 {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  padding-right: 16px;
+}
+
+.data-item-4 {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.item-img {
+  padding-right: 5px;
+}
+
+.item-text {
+  font-size: 12px;
+  line-height: 12px;
 }
 
 /*===============================HEADER======================================
@@ -100,8 +152,6 @@ body {
 
   &__nav {
     display: flex;
-
-
   }
 
   &__nav-list {
@@ -114,10 +164,21 @@ body {
     font-size: 15px;
     line-height: 20px;
     margin-right: 32px;
+    transition: 0.6s;
+    
+    
 
     &:first-child {
       font-size: 13px;
       margin-right: 56px;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    &:hover {
+      color: $lg;
+      transition: 0.3s;
     }
   }
 
@@ -136,6 +197,32 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     padding: 10px 20px 13px 20px;
+
+    &:hover {
+      opacity: 1;
+      -webkit-animation: flash 1s;
+      animation: flash 1s;
+    }
+  
+    @-webkit-keyframes flash {
+      0% {
+        opacity: .3;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes flash {
+      0% {
+        opacity: .3;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
   }
 
 
@@ -144,7 +231,7 @@ body {
     background: url(../img/pictures/main.jpg) center center / cover no-repeat;
   }
 
-  &__body-inner {}
+
 
   &__body-heading {
     margin: 0 auto;
@@ -222,6 +309,7 @@ body {
   &__list-item {
     min-width: 576px;
     min-height: 600px;
+    transition: 0.7s;
 
     &:first-child {
       background: url(../img/pictures/areas/product-photo.jpg) center center / cover no-repeat;
@@ -237,6 +325,12 @@ body {
 
     &:last-child {
       background: url(../img/pictures/areas/wildlefe-photo.jpg) center center / cover no-repeat;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+      transition: 0.3s;
+      width: 100%;
     }
   }
 
@@ -274,30 +368,38 @@ body {
   &__example-1 {
     background: url(../img/pictures/sunset.jpg) center / cover no-repeat;
     min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   &__example-2 {
     background: url(../img/pictures/monstera.jpg) center center / cover no-repeat;
     min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   &__example-3 {
     background: url(../img/pictures/star.jpg) center center / cover no-repeat;
     min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   &__example-content {
-    display: flex;
-    flex-direction: column;
-    padding: 260px 0px 203px 1080px;
+    padding: 260px 60px 205px 0px;
   }
 
   &__content-title {
+    align-self: flex-start;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
-  
+
   }
 
   &__content-text {
@@ -305,45 +407,376 @@ body {
     font-size: 14px;
     line-height: 20px;
     min-height: 60px;
- 
+    max-width: 300px;
   }
 
-  &__content-data {
+}
+
+/*===============================TOOLS======================================
+=====================================================================================*/
+
+.tools {
+  display: flex;
+
+  &__left {
+    display: flex;
+    min-width: 50%;
+  }
+
+  &__content {
+    max-width: 600px;
+    min-height: 314px;
+    padding: 173px 106px 153px 100px;
+  }
+
+  &__subtitile {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $lg;
+    margin-bottom: 6px;
+
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    min-width: 514px;
+    margin-bottom: 20px;
+  }
+
+  &__btn {}
+
+  &__img {
+    min-width: 50%;
+    min-height: 540px;
+    background: url(../img/pictures/tools.jpg) center center / cover no-repeat;
+  }
+
+  .data {
+    padding-top: 484px;
+  }
+}
+
+/*===============================CLIENTS======================================
+=====================================================================================*/
+
+.clients {
+
+  &__heading {
+    margin-top: 113px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 42px;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    color: $lg;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 136px 100px;
+  }
+
+  &__item {
+    &:hover {
+      opacity: 1;
+      -webkit-animation: flash 1s;
+      animation: flash 1s;
+    }
+  
+    @-webkit-keyframes flash {
+      0% {
+        opacity: .3;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes flash {
+      0% {
+        opacity: .3;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/*===============================CONTACT======================================
+=====================================================================================*/
+
+.contact {
+  text-align: center;
+
+
+  &__heading {
+    margin-top: 113px;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+
+    font-size: 40px;
+    line-height: 42px;
+    margin-bottom: 15px;
+
+  }
+
+  &__subtitle {
+    color: $lg;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &__btn {
+    margin-bottom: 108px;
+  }
+}
+
+/*===============================FOOTER======================================
+=====================================================================================*/
+
+
+.footer {
+
+  &__inner {
+    margin: 100px 136px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+
+  &__heading {}
+
+  &__logo {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 13px;
+    line-height: 20px;
+    color: $lg;
+  }
+
+  &__right-list {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 55px;
+
+    &:last-child {
+      margin-right: 100px;
+    }
+  }
+
+  &__title-item {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $lg;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    transition: 0.6s;
+
+    &:hover {
+      color: $lg;
+      transition: 0.3s;
+    }
+  }
+
+  &__hr-line {
+    border: 1px solid #FFFFFF;
+    height: 2px;
+  }
+
+  &__middle {
+    display: flex;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+
+  &__mail {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    align-content: space-between;
+  }
+
+  &__sub {
+    flex: 2;
+
+  }
+
+  &__sub-title {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__sub-subtitle {
+    font-size: 13px;
+    line-height: 20px;
+    color: $lg;
+  }
+
+  &__sub-form {
+    position: relative;
     display: flex;
     justify-content: flex-end;
-    padding: 0px 40px 40px 0;
   }
 
-  &__data-item-1 {
+  &__sub-btn {
+    background: #000000;
+    border-radius: 11px;
+    height: 30px;
+    width: 63px;
+    position: absolute;
+    top: 10px;
+    bottom: 0px;
+    margin-right: 6px;
+
+    &:hover {
+      opacity: 1;
+      -webkit-animation: flash 1s;
+      animation: flash 1s;
+    }
+  
+    @-webkit-keyframes flash {
+      0% {
+        opacity: .3;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes flash {
+      0% {
+        opacity: .3;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__sub-input {
+    position: relative;
+    display: inline-block;
+    min-width: 500px;
+    height: 52px;
+    color: $b;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    padding: 9px 10px 13px 42px;
+    border-radius: 12px;
+    background: $w;
+    transition: all 100s;
+  }
+
+  &__bottom {
+    margin-top: 56px;
+    padding-bottom: 104px;
     display: flex;
-    font-size: 12px;
-    line-height: 12px;
-    padding-right: 16px;
+    justify-content: space-between;
   }
 
-  &__item-img {
-    padding-right: 5px;
-  }
-
-
-  &__data-item-2 {
+  &__copy {
     display: flex;
-    font-size: 12px;
-    line-height: 12px;
-    padding-right: 16px;
+    align-items: center;
   }
 
-  &__data-item-3 {
-    display: flex;
-    font-size: 12px;
-    line-height: 12px;
-    padding-right: 16px;
+  &__copy-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: $lg;
   }
 
-  &__data-item-4 {
-    display: flex;
-    font-size: 12px;
-    line-height: 12px;
+  &__copy-text-2 {
+    font-size: 13px;
+    line-height: 20px;
+    color: $lg;
   }
 
+
+  &__licensing {
+    font-size: 13px;
+    line-height: 20px;
+    color: $lg;
+  }
+
+  &__social {}
+
+  &__social-item {
+    margin-right: 20px;
+    
+    &:hover {
+      opacity: 1;
+      -webkit-animation: flash 1s;
+      animation: flash 1s;
+    }
+  
+    @-webkit-keyframes flash {
+      0% {
+        opacity: .3;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes flash {
+      0% {
+        opacity: .3;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
 }
