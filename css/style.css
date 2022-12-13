@@ -865,6 +865,7 @@ body {
   }
   .areas__item-content {
     margin-right: 30px;
+    margin-bottom: 12px;
   }
   .contact__title {
     font-size: 30px;
@@ -897,6 +898,9 @@ body {
 /*===============================432px==========================================
 =====================================================================================*/
 @media (max-width: 432px) {
+  .header__data {
+    padding-bottom: 15px;
+  }
   .footer__copy-text-2 {
     display: none;
   }
