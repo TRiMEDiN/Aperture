@@ -59,7 +59,6 @@ body {
   padding: 9px 10px 13px 42px;
   border-radius: 14px;
   background: #FFFFFF;
-  transition: all 100s;
 }
 .button:hover .circle {
   opacity: 1;
