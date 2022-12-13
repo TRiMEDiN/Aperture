@@ -71,7 +71,7 @@ body {
   padding: 9px 10px 13px 42px;
   border-radius: 14px;
   background: $w;
-  transition: all 100s;
+  
 
   &:hover .circle {
     opacity: 1;
@@ -901,6 +901,7 @@ body {
     align-items: flex-end;
     justify-content: center;
     background-color: $b;
+    border-radius: 25%;
     transition: all 0.3s;
 
 
