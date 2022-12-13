@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 <title>Document</title>
-
 <body>
   <div class="wrapper">
     <div class="overlay"></div>
@@ -18,16 +17,16 @@
       <div class="header__top header">
         <div class="header__top-inner">
           <div class="header__logo">
-            <img src="img/logo.svg" alt="Logo">
+            <a href="/"><img src="img/logo.svg" alt="Logo"></a>
           </div>
           <div class="header__top-right">
             <nav class="header__nav">
-              <ul class="header__nav-list">
-                <a class="header__nav-item" href="#">What we do</a>
-                <a class="header__nav-item" href="#">Tools</a>
-                <a class="header__nav-item" href="#">Clients</a>
-                <a class="header__nav-item" href="#">Contact</a>
-              </ul>
+                <ul class="header__nav-list">
+                  <li class="header__nav-item"><a href="#areas" class="header__nav-link">What we do</a></li>
+                  <li class="header__nav-item"><a href="#tools" class="header__nav-link">Tools</a></li>
+                  <li class="header__nav-item"><a href="#clients" class="header__nav-link" >Clients</a></li>
+                  <li class="header__nav-item"><a href="#contact" class="header__nav-link" >Contact</a></li>
+                </ul>
             </nav>
             <a href="#" class="header__top-btn">Get template</a>
           </div>
@@ -106,7 +105,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="areas">
+      <section class="areas" id="areas">
         <div class="areas__inner">
           <div class="areas__heading">
             <h2 class="areas__title">What we do.</h2>
@@ -386,7 +385,7 @@
           </div>
         </div>
       </section>
-      <section class="tools">
+      <section class="tools" id="tools">
         <div class="tools__left">
           <div class="tools__content">
             <p class="tools__subtitle">The Gear cage</p>
@@ -584,7 +583,7 @@
           </div>
         </div>
       </section>
-      <sections class="clients">
+      <sections class="clients" id="clients">
         <div class="clients__heading">
           <h2 class="clients__title">Past clients</h2>
           <p class="clients__subtitle">Trusted by your favourite companies</p>
@@ -743,7 +742,7 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact__heading">
           <h2 class="contact__title">Need help with photography<br> or videography?</h2>
           <p class="contact__subtitle">We're here for you!</p>
@@ -795,7 +794,7 @@
         <div class="footer__top">
           <div class="footer__heading">
             <div class="footer__logo logo">
-              <img src="img/logo.svg" alt="Logo">
+             <a href="/"><img src="img/logo.svg" alt="Logo"></a>
             </div>
             <p class="footer__subtitle">Photographers & videographers capturing the world around us.</p>
           </div>
@@ -812,8 +811,7 @@
               <li class="footer__item"><a href="#">Gear cage</a></li>
               <li class="footer__item"><a href="#">Featured images</a></li>
               <li class="footer__item"><a href="#">Contact</a></li>
-              <li class="footer__item"><a href="#">Style guide</>
-              </li>
+              <li class="footer__item"><a href="#">Style guide</li>
               <li class="footer__item"><a href="#">Instructions</a></li>
               <li class="footer__item"><a href="#">Changelog</a></li>
             </ul>

@@ -232,6 +232,7 @@ body {
 .header__body {
   min-height: 716px;
   background: url(../img/pictures/main.jpg) center center/cover no-repeat;
+  background-attachment: fixed;
 }
 .header__body-heading {
   margin: 0 auto;
@@ -337,6 +338,7 @@ body {
 ===================================================================================== */
 .photo__example-1 {
   background: url(../img/pictures/sunset.jpg) center/cover no-repeat;
+  background-attachment: fixed;
   min-height: 600px;
   display: flex;
   flex-direction: column;
@@ -344,6 +346,7 @@ body {
 }
 .photo__example-2 {
   background: url(../img/pictures/monstera.jpg) center center/cover no-repeat;
+  background-attachment: fixed;
   min-height: 600px;
   display: flex;
   flex-direction: column;
@@ -351,6 +354,7 @@ body {
 }
 .photo__example-3 {
   background: url(../img/pictures/star.jpg) center center/cover no-repeat;
+  background-attachment: fixed;
   min-height: 600px;
   display: flex;
   flex-direction: column;
@@ -411,6 +415,7 @@ body {
   min-width: 50%;
   min-height: 540px;
   background: url(../img/pictures/tools.jpg) center center/cover no-repeat;
+  background-attachment: fixed;
 }
 .tools .data {
   padding-top: 484px;
@@ -695,7 +700,7 @@ body {
   flex-direction: column;
 }
 
-.footer__subtitle {
+.footer__sub-title {
   padding-right: 15px;
 }
 
@@ -707,13 +712,14 @@ body {
     top: 0;
     right: 0;
     z-index: 50;
-    height: 90px;
-    width: 100%;
+    height: auto;
+    width: auto;
     padding: 25px 25px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    background-color: #000000;
     transition: all 0.3s;
   }
   .burger span {
@@ -722,7 +728,7 @@ body {
     width: 30px;
     border-radius: 3px;
     margin: 5px 0;
-    background-color: #C0C0C0;
+    background-color: #FFFFFF;
     transition: all 0.3s;
   }
   .burger::before, .burger::after {
@@ -731,14 +737,14 @@ body {
     height: 4px;
     width: 30px;
     border-radius: 3px;
-    background-color: #C0C0C0;
+    background-color: #FFFFFF;
     transition: all 0.3s;
   }
   .header__top {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
     z-index: 40;
     min-width: 50%;
     background-color: #000000;
