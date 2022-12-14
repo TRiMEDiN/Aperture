@@ -890,8 +890,8 @@ body {
 
   .burger {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 3%;
+    right: 4%;
     z-index: 50;
     height: auto;
     width: auto;
@@ -1064,7 +1064,6 @@ body {
 
   @media (max-width: 550px) {
     .header {
-      height: 100%;
 
       &__top {
         min-width: 100%;
